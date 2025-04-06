@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic" >
+        <p>Hello! I'm Arlyn Fernandes, a passionate web developer with a love for creating stunning and functional websites.</p>
+        <p>I specialize in front-end development, UI/UX design, and responsive web applications.</p>
+        <p>I specialize in <b>HTML, CSS, and JavaScript</b>, creating vibrant and visually appealing websites.</p>
+        <p>Bringing creativity to web design is what excites me the most, and I love experimenting with colors and animations to craft engaging user experiences.</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript & jQuery</li>
+            <li>React.js & Next.js</li>
+            <li>Node.js & Express.js</li>
+            <li>Database Management (MongoDB, MySQL)</li>
+        </ul>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1: Portfolio Website</h3>
+            <p>A personal website to showcase my work and skills. Built using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2: E-Commerce Site</h3>
+            <p>An online store built with React, Firebase authentication, and Stripe payment integration.</p>
+        </div>
+        <div class="project">
+            <h3>Project 3: To-Do App</h3>
+            <p>A task management application with local storage support and a user-friendly UI.</p>
+        </div>
+        <div class="project">
+            <h3>Project 4: Weather App</h3>
+            <p>A real-time weather forecasting application using OpenWeather API.</p>
+        </div>
+    </section>
+    
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <p>"Amazing work! The website design was fantastic." - Client A</p>
+        <p>"Professional and quick delivery. Highly recommended!" - Client B</p>
+        <p>"Incredible attention to detail and creative solutions!" - Client C</p>
+    </section>
+    
+    <section id="blog">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-post">
+            <h3>How to Build a Responsive Website</h3>
+            <p>Learn the best practices for creating a fully responsive and mobile-friendly website.</p>
+        </div>
+        <div class="blog-post">
+            <h3>JavaScript ES6 Features You Should Know</h3>
+            <p>A quick overview of modern JavaScript features that enhance coding efficiency.</p>
+        </div>
+        <div class="blog-post">
+            <h3>Why UI/UX Design Matters</h3>
+            <p>Understand the impact of good design in creating a user-friendly experience.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:arlynfernandes05@gmail.com">arlynfernandes05@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/arlyn-fernandes-1a612626b" target="_blank">linkedin.com/in/arlyn-fernandes-1a612626b</a></p>
+        <p>GitHub: <a href="https://github.com/Arlyn-05" target="_blank">github.com/Arlyn-05</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Arlyn Fernandes. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            function revealSections() {
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < window.innerHeight - 100) {
+                        section.classList.add("show");
+                    }
+                });
+            }
+            window.addEventListener("scroll", revealSections);
+            revealSections();
+        });
+    </script>
+</body>
+</html>
